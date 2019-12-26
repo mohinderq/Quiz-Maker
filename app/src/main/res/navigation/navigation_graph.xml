@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/createQuizFragment"
+        android:name="nl.mohinder.quizmaker.fragment.CreateQuizFragment"
+        android:label="CreateQuizFragment" />
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="nl.mohinder.quizmaker.fragment.QuizFragment"
+        android:label="QuizFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="nl.mohinder.quizmaker.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createQuizFragment"
+            app:destination="@id/createQuizFragment" />
+    </fragment>
+</navigation>
